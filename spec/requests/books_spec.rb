@@ -13,15 +13,18 @@
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/books", type: :request do
-  
+
   # Book. As you add validations to Book, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { title: "My Title",
+    author: "My Author",
+    price: 0.00,
+    date: "1940-01-01" }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { title: nil, author: nil, price: 0.00, date: nil}
   }
 
   describe "GET /index" do
